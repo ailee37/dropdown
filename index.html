@@ -13,34 +13,41 @@
     <main class="container" role="main">
         <section id="introduction" class="section">
             <div class="hero-heading">
-                <h1>Dropdown Menu Case Study</h1>
+                <h1>How can we make dropdown menus better?</h1>
             </div>
 
             <div class="white-box-top" style="margin-bottom: 27px;">
 
                 <p>
-                    This is a case study on dropdown menus across various applications including: 
-                    Hollister, AirBnB, and Google Slides. The purpose of this study is to anaylyze 
+                    <b>What makes a good dropdown menu?</b> Is it efficiency? Learnability? Accessibility? <br>
+                    ...   <br>
+                    Memorability? <br>
+                    <br>
+
+                    In an ideal world, it would be all of the above, but most applications sacrifice 
+                    one in favor of another. I noticed while toying around on various applications 
+                    that dropdown menus seem to be one of the most inconsistent web components. They 
+                    vary in activation, focus order, and states among others. <br>
+                    <br>
+
+                    Today, we're going to observe dropdown menus across various applications including: 
+                    <b>Hollister, AirBnB, and Google Slides</b>. The purpose of this study is to anaylyze 
                     the differences in how these applications were implemented and catered to user 
                     needs/input. We will review how users can interact with dropdowns for each interface 
-                    and how dropdowns as a feature can be improved upon. This study will also feature 
-                    a revised design for how to make AirBnB's dropdowns more accessible.
+                    and how dropdowns as a feature can be improved upon which will be demonstrated in a revised design model.
                 </p>
             </div>
-
-            
-        <div class="transition-text" style="text-align: center; align-content: center;">
-
-            <p>
-                Below are snippets of dropdowns from example applications ranked from most to least accessible in my opinion.
-            </p>
-        </div>
+            <a href="#part-1" class="scroll-arrow">&#x2B9F;</a>
         </section>
 
-        <section id="part-2" class="section">
+        <section id="part-1" class="section">
             <div class="hero-heading">
                 <h2 class="section-subheader">Hollister Co: Neutral Default State vs. Activated Dropdown</h2>
             </div>
+                        
+            <p>
+                <b style="font-size: medium;">Hollister Co has a dropdown that is activated on hover and displays all categories and subcategories at once. An underline is used to indicate which selection is active.</b>
+            </p>
             <div class="image-row">
 
                 <div class="image-container">
@@ -55,15 +62,14 @@
 
                 <div class="bottom-space"></div>
             </div>
-            
-            <p>
-                <b style="font-size: medium; text-decoration: underline;">Hollister Co: Neutral Default State vs. Activated Dropdown</b>
-            </p>
         </section>
         <section id="part-2" class="section">
             <div class="hero-heading">
                 <h2 class="section-subheader">AirBnB: Neutral Default State vs. Activated Dropdown</h2>
             </div>
+            <p>
+                <b style="font-size: medium;">AirBnB has a dropdown that activates upon click and displays limited options but provides a search feature for certain categories.</b>
+            </p>
             <div class="image-row">
 
                 <div class="image-container">
@@ -78,15 +84,15 @@
 
                 <div class="bottom-space"></div>
             </div>
-            
-            <p>
-                <b style="font-size: medium; text-decoration: underline;">AirBnB: Neutral Default State vs. Activated Dropdown</b>
-            </p>
         </section>
         <section id="part-2" class="section">
             <div class="hero-heading">
                 <h2 class="section-subheader">Google Slides: Neutral Default State vs. Activated Dropdown</h2>
             </div>
+                        
+            <p>
+                <b style="font-size: medium;">Google Slides has a dropdown that activates upon click and displays extended subcategories upon hover. It is the least learnable and accessible of the three sites.</b>
+            </p>
             <div class="image-row">
 
                 <div class="image-container">
@@ -101,135 +107,111 @@
 
                 <div class="bottom-space"></div>
             </div>
-            
-            <p>
-                <b style="font-size: medium; text-decoration: underline;">Google Slides: Neutral Default State vs. Activated Dropdown</b>
-            </p>
         </section>
 
 
-        <div class="transition-text">
-
-            <p>
-            <p>
-                Liv’s feedback reinforced the importance of intentional design choices, especially when working within
-                sensitive,
-                real-world contexts like healthcare. While we weren’t able to make all the suggested refinements in this
-                iteration,
-                the insights we gained will continue to shape how we approach user needs in future work. This project
-                gave us a
-                hands-on understanding of how thoughtful iteration, grounded in feedback, can lead to more meaningful
-                digital
-                experiences.
-            </p>
-
-            </p>
-        </div>
-
-        <section id="part-1" class="section">
+        <section id="part-3" class="section">
             <div class="white-box-actual">
                 <div class="hero-heading">
                     <h2 class="section-subheader">Input Analysis</h2>
                 </div>
-                <table style="width: 100%">
-                    <tr>
-                      <th>
-                      </th>
-                      <th>Mouse/Touchpad</th>
-                      <th>Keyboard</th>
-                      <th>Touchscreen</th>
-                    </tr>
-                    <tr>
-                      <th>
-                        Hollister
-                      </th>
-                      <td>
-                        <ul>
-                          <li>Activates on hover and expands to display subcategories</li>
-                          <li>User can drag and drop text (url) into search bar</li>
-                          <li>Efficient and learnable</li>
-                          <li>No scroll option to traverse subcategories</li>
-                        </ul>
-                      </td>
-                      <td>
-                        <ul>
-                          <li>User TABs across dropdown headers and must double TAB to activate a dropdown arrow</li>
-                          <li>User must TAB in order to jump into dropdown options and traverse subcategories</li>
-                          <li>SHIFT + TAB can be used to backtrace</li>
-                          <li>ENTER will close dropdown menu if no selection is active, otherwise selected choice is executed</li>
-                          <li>Learnable but can be confusing and counterintuitive</li>
-                          <li>Arrows cannot be used to traverse options</li>
-                        </ul>
-                      </td>
-                      <td>          
-                        <ul>
-                          <li>Users must tap options to activate/select</li>
-                          <li>Learnable</li>
-                          <li>Drag to scroll</li>
-                      </ul>
-                    </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        AirBnB
-                      </th>
-                      <td>
-                        <ul>
-                          <li>Category focuses upon hover</li>
-                          <li>Dropdown menu activates upon clicking</li>
-                          <li>User can scroll with mouse or drag scroll bar</li>
-                          <li>Subcategories highlight upon hover</li>
-                          <li>Learnable</li>
-                      </ul>
-                      </td>
-                      <td>
-                        <ul>
-                          <li>User TABs across dropdown headers (dropdown activates upon TAB)</li>
-                          <li>UP and DOWN arrows can be used to scroll but not traverse options</li>
-                          <li>SHIFT + TAB can be used to backtrace</li>
-                          <li>ENTER is used to select/save option</li>
-                          <li>ENTER will activate next category</li>
-                          <li>Not very learnable or memorable (confusing keyboard commands)</li>
-                      </ul>
-                      </td>
-                      <td>
-                        <ul>
-                          <li>User must tap search bar to show dropdown categories</li>
-                          <li>Drag to scroll</li>
-                          <li>Tap to select</li>
-                          <li>Next category will activate upon selection</li>
-                          <li>Learnable</li>
-                      </ul>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        Google Slides
-                      </th>
-                      <td>
-                        <ul>
-                          <li>Dropdown dategory highlights upon hover</li>
-                          <li>User must click to activate dropdown</li>
-                          <li>Extended dropdowns activated upon hover (ex: shapes -> rectangle, circle, etc.)</li>
-                          <li>Click to select option</li>
-                          <li>Learnable</li>
-                      </ul>
-                      </td>
-                      <td>
-                        <ul>
-                          <li>Unusable with keyboard commands</li>
-                          <li>User MUST use a mouse</li>
-                      </ul>
-                      </td>
-                      <td>
-                        <ul>
-                          <li>Dropdown pops up from bottom half of screen</li>
-                          <li>User taps options to select</li>
-                          <li>Extended dropdowns activated with tap</li>
-                          <li>Learnable</li>
-                      </ul>
-                      </td>
-                    </tr>
+                <table class="analysis-table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Mouse/Touchpad</th>
+                        <th>Keyboard</th>
+                        <th>Touchscreen</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Hollister</th>
+                        <td data-label="Mouse/Touchpad">
+                          <ul>
+                            <li>Activates on hover and expands to display subcategories</li>
+                            <li>User can drag and drop text (URL) into search bar</li>
+                            <li>Efficient and learnable</li>
+                            <li>No scroll option to traverse subcategories</li>
+                          </ul>
+                        </td>
+                        <td data-label="Keyboard">
+                          <ul>
+                            <li>User TABs across dropdown headers and must double TAB to activate a dropdown arrow</li>
+                            <li>User <strong>must</strong> TAB in order to jump into dropdown options and traverse subcategories</li>
+                            <li>ENTER will close dropdown menu if no selection is active; otherwise, selected choice is executed</li>
+                            <li>Arrows cannot be used to traverse options</li>
+                            <li>SHIFT + TAB can be used to backtrace</li>
+                            <li><strong>Learnable but can be confusing and counterintuitive</strong></li>
+                          </ul>
+                        </td>
+                        <td data-label="Touchscreen">
+                          <ul>
+                            <li>Users must tap options to activate/select</li>
+                            <li>Learnable</li>
+                            <li>Drag to scroll</li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                      <tr>
+                        <th>AirBnB</th>
+                        <td data-label="Mouse/Touchpad">
+                          <ul>
+                            <li>Category focuses upon hover</li>
+                            <li>Dropdown menu activates upon clicking</li>
+                            <li>User can scroll with mouse or drag scroll bar</li>
+                            <li>Subcategories highlight upon hover</li>
+                            <li>Learnable</li>
+                          </ul>
+                        </td>
+                        <td data-label="Keyboard">
+                          <ul>
+                            <li>User TABs across dropdown headers (dropdown activates upon TAB)</li>
+                            <li>UP and DOWN arrows can be used to scroll but not traverse options</li>
+                            <li>ENTER is used to select/save option</li>
+                            <li>ENTER will activate next category</li>
+                            <li>SHIFT + TAB can be used to backtrace</li>
+                            <li><strong>Not very learnable or memorable (confusing keyboard commands)</strong></li>
+                          </ul>
+                        </td>
+                        <td data-label="Touchscreen">
+                          <ul>
+                            <li>User must tap search bar to show dropdown categories</li>
+                            <li>Drag to scroll</li>
+                            <li>Tap to select</li>
+                            <li>Next category will activate upon selection</li>
+                            <li>Learnable</li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                      <tr>
+                        <th>Google Slides</th>
+                        <td data-label="Mouse/Touchpad">
+                          <ul>
+                            <li>Dropdown category highlights upon hover</li>
+                            <li>User <strong>must click</strong> to activate dropdown and select</li>
+                            <li>Extended dropdowns activated upon hover (e.g., shapes → rectangle, circle, etc.)</li>
+                            <li>Learnable</li>
+                          </ul>
+                        </td>
+                        <td data-label="Keyboard">
+                          <ul>
+                            <li>User <strong>MUST</strong> use a mouse</li>
+                            <li><strong>Unusable with keyboard commands</strong></li>
+                          </ul>
+                        </td>
+                        <td data-label="Touchscreen">
+                          <ul>
+                            <li>Dropdown pops up from bottom half of screen</li>
+                            <li>User taps options to select</li>
+                            <li>Extended dropdowns activated with tap</li>
+                            <li>Learnable</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
                   </table>
             </div>
 
@@ -239,92 +221,91 @@
         </section>
 
         <section id="part-5" class="section">
-            <div  class="white-box-actual">
+            <div class="white-box-actual">
                 <h2>Output Analysis</h2>
-                  <table style="width: 100%">
+                <table class="analysis-table">
+                  <thead>
                     <tr>
-                      <th>
-                      </th>
+                      <th></th>
                       <th>Mouse/Touchpad</th>
                       <th>Keyboard</th>
                       <th>Touchscreen</th>
                     </tr>
+                  </thead>
+                  <tbody>
                     <tr>
-                      <th>
-                        Hollister
-                      </th>
-                      <td>
+                      <th>Hollister</th>
+                      <td data-label="Mouse/Touchpad">
                         <ul>
                           <li>Underline animation indicates current active selection</li>
                           <li>Dotted border outlines selection upon click</li>
                           <li>Menu stays open until user moves cursor off</li>
                         </ul>
                       </td>
-                      <td>
+                      <td data-label="Keyboard">
                         <ul>
                           <li>Focus order is intuitive and easy to use</li>
-                          <li>TABed cateory will be underlined</li>
+                          <li>TABed category will be underlined</li>
                           <li>Currently active option is both underlined and outlined with a dotted border</li>
                           <li>Visually effective</li>
                         </ul>
                       </td>
-                      <td>          
+                      <td data-label="Touchscreen">
                         <ul>
                           <li>Selected option outlined with dotted border</li>
                           <li>May be hard to see</li>
-                      </ul>
-                    </td>
+                        </ul>
+                      </td>
                     </tr>
+              
                     <tr>
-                      <th>
-                        AirBnB
-                      </th>
-                      <td>
+                      <th>AirBnB</th>
+                      <td data-label="Mouse/Touchpad">
                         <ul>
                           <li>Dropdown header highlights upon hover</li>
                           <li>Upon selection, menu will invert colors (selected option white, background gray)</li>
-                          <li>Currenlty active selection highlighted</li>
+                          <li>Currently active selection highlighted</li>
                           <li>Visually effective</li>
-                      </ul>
+                        </ul>
                       </td>
-                      <td>
+                      <td data-label="Keyboard">
                         <ul>
                           <li>Focus order intuitive</li>
                           <li>Colors invert upon activation (visually effective)</li>
                           <li>Selected option stored and displayed where header used to be</li>
-                      </ul>
+                        </ul>
                       </td>
-                      <td>
+                      <td data-label="Touchscreen">
                         <ul>
                           <li>Lacks indicators (activates next category upon selection)</li>
                           <li>Can be improved upon</li>
-                      </ul>
+                        </ul>
                       </td>
                     </tr>
+              
                     <tr>
-                      <th>
-                        Google Slides
-                      </th>
-                      <td>
+                      <th>Google Slides</th>
+                      <td data-label="Mouse/Touchpad">
                         <ul>
                           <li>Dropdown header highlights upon hover, remains highlighted upon click</li>
                           <li>Subcategories highlight as hover traverses</li>
                           <li>No different indicator for selected option (remains highlighted)</li>
-                      </ul>
+                        </ul>
                       </td>
-                      <td>
+                      <td data-label="Keyboard">
                         <ul>
                           <li>Not applicable</li>
-                      </ul>
+                        </ul>
                       </td>
-                      <td>
+                      <td data-label="Touchscreen">
                         <ul>
-                          <li>Selection is briefly highlighted before excuting choice</li>
-                      </ul>
+                          <li>Selection is briefly highlighted before executing choice</li>
+                        </ul>
                       </td>
                     </tr>
-                  </table>
-            </div>
+                  </tbody>
+                </table>
+              </div>
         </section>
 
         <div class="transition-text">
@@ -341,11 +322,17 @@
 
         <section id="part-4" class="section">
             <h2>Adjusted AirBnB Interface</h2>
-            <div class="carousel">
+            <!-- <div class="carousel">
               <button onclick="goBackward()">&#x276E;</button>
           <img id="mainImg" class="main-img" src="" alt="Slideshow Image">
           <button onclick="goForward()">&#x276F;</button>
-            </div>
+            </div> -->
+
+            <div class="carousel" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+                <button onclick="goBackward()" style="font-size: 50px; padding: 10px 20px;">&#x276E;</button>
+                <img id="mainImg" class="main-img" src="" alt="Slideshow Image" style="max-width: 1500px;">
+                <button onclick="goForward()" style="font-size: 50px; padding: 10px 20px;">&#x276F;</button>
+              </div>
           
         </section>
 
