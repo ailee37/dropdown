@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Components</title>
+    <link rel="stylesheet" href="https://use.typekit.net/hbu1pct.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .container {
+        display: grid;
+        grid-template-areas: "left right";
+        grid-template-columns: repeat (2, 1fr);
+        gap: 5px;
+        /* background-color: #2196f3; */
+        padding: 5px;
+        height: 50vh;
+        width: 85%;
+        justify-self: center;
+        margin: 5rem;
+        align-items: center;
+      }
+      .container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+      }
+
+      .container p {
+        text-align: center;
+        justify-items: center;
+      }
+
+      .container img {
+        width: 100%;
+        height: auto;
+      }
+      .grid {
+        display: grid;
+        gap: 5px;
+        padding: 5px;
+        height: 70vh;
+        width: 85%;
+        justify-self: center;
+        justify-content: center;
+        margin: 5rem;
+        background-color: cornflowerblue;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .gridd {
+        display: grid;
+        gap: 5px;
+        padding: 5px;
+        height: 70vh;
+        width: 85%;
+        justify-self: center;
+        justify-content: center;
+        margin: 5rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        justify-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dropdown Menu Case Study</h1>
+
+    <p>
+      This is a case study on dropdown menus across various applications including: Hollister, AirBnB, and Google Slides. The purpose of this study is to anaylyze the differences in how these applications were implemented and catered to user needs/input. We will review how users can interact with dropdowns for each interface and how dropdowns as a feature can be improved upon. This study will also feature a revised design for how to make AirBnB's dropdowns more accessible.
+    </p>
+<!-- 
+    <div class="container">
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="content">
+        <h2>What is a dropdown?</h2>
+      </div>
+    </div> -->
+    <!-- <div class="grid">
+        <img src="images/hollister_1.png" alt="Hollister Neutral State" class="center" style="display:inline-block;">
+        <img src="images/hollister_2.png" alt="Hollister Hovered" class="center" style="display:inline-block;">
+        <img src="images/hollister_3.png" alt="Hollister Hovered Dropdown Item" class="center"style="display:inline-block;">
+    </div> -->
+
+    <div class="container">
+        <img src="images/hollister_1.png" alt="Hollister Neutral State" class="center">
+        <img src="images/hollister_3.png" alt="Hollister Hovered" class="center" style="display:inline-block;">
+        <p>
+          neutral default state vs. activated dropdown (Hollister Co)
+        </p>
+    </div>
+
+    <div class="container">
+      <img src="images/airbnb_1.png" alt="Hollister Neutral State" class="center">
+      <img src="images/airbnb_4.png" alt="Hollister Hovered" class="center" style="display:inline-block;">
+      
+  <p>
+    neutral default state vs. activated dropdown (AirBnB)
+  </p>
+    </div>
+
+  <div class="container">
+    <img src="images/powerpoint_1.png" alt="Hollister Neutral State" class="center">
+    <img src="images/powerpoint_4.png" alt="Hollister Hovered" class="center" style="display:inline-block;">
+    <p>
+      neutral default state vs. activated dropdown (Google Slides)
+    </p>
+  </div>
+
+
+<h2>Input Analysis</h2>
+
+    <table style="width: 85%">
+      <tr>
+        <th>
+        </th>
+        <th>Mouse/Touchpad</th>
+        <th>Keyboard</th>
+        <th>Touchscreen</th>
+      </tr>
+      <tr>
+        <th>
+          Hollister
+        </th>
+        <td>
+          <ul>
+            <li>Activates on hover and expands to display subcategories</li>
+            <li>User can drag and drop text (url) into search bar</li>
+            <li>Efficient and learnable</li>
+            <li>No scroll option to traverse subcategories</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>User TABs across dropdown headers and must double TAB to activate a dropdown arrow</li>
+            <li>User must TAB in order to jump into dropdown options and traverse subcategories</li>
+            <li>SHIFT + TAB can be used to backtrace</li>
+            <li>ENTER will close dropdown menu if no selection is active, otherwise selected choice is executed</li>
+            <li>Learnable but can be confusing and counterintuitive</li>
+            <li>Arrows cannot be used to traverse options</li>
+          </ul>
+        </td>
+        <td>          
+          <ul>
+            <li>Users must tap options to activate/select</li>
+            <li>Learnable</li>
+            <li>Drag to scroll</li>
+        </ul>
+      </td>
+      </tr>
+      <tr>
+        <th>
+          AirBnB
+        </th>
+        <td>
+          <ul>
+            <li>Category focuses upon hover</li>
+            <li>Dropdown menu activates upon clicking</li>
+            <li>User can scroll with mouse or drag scroll bar</li>
+            <li>Subcategories highlight upon hover</li>
+            <li>Learnable</li>
+        </ul>
+        </td>
+        <td>
+          <ul>
+            <li>User TABs across dropdown headers (dropdown activates upon TAB)</li>
+            <li>UP and DOWN arrows can be used to scroll but not traverse options</li>
+            <li>SHIFT + TAB can be used to backtrace</li>
+            <li>ENTER is used to select/save option</li>
+            <li>ENTER will activate next category</li>
+            <li>Not very learnable or memorable (confusing keyboard commands)</li>
+        </ul>
+        </td>
+        <td>
+          <ul>
+            <li>User must tap search bar to show dropdown categories</li>
+            <li>Drag to scroll</li>
+            <li>Tap to select</li>
+            <li>Next category will activate upon selection</li>
+            <li>Learnable</li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Google Slides
+        </th>
+        <td>
+          <ul>
+            <li>Dropdown dategory highlights upon hover</li>
+            <li>User must click to activate dropdown</li>
+            <li>Extended dropdowns activated upon hover (ex: shapes -> rectangle, circle, etc.)</li>
+            <li>Click to select option</li>
+            <li>Learnable</li>
+        </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Unusable with keyboard commands</li>
+            <li>User MUST use a mouse</li>
+        </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Dropdown pops up from bottom half of screen</li>
+            <li>User taps options to select</li>
+            <li>Extended dropdowns activated with tap</li>
+            <li>Learnable</li>
+        </ul>
+        </td>
+      </tr>
+    </table>
+    <br><br/>
+    <h2>Output Analysis</h2>
+    <table style="width: 85%">
+      <tr>
+        <th>
+        </th>
+        <th>Mouse/Touchpad</th>
+        <th>Keyboard</th>
+        <th>Touchscreen</th>
+      </tr>
+      <tr>
+        <th>
+          Hollister
+        </th>
+        <td>
+          <ul>
+            <li>Underline animation indicates current active selection</li>
+            <li>Dotted border outlines selection upon click</li>
+            <li>Menu stays open until user moves cursor off</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Focus order is intuitive and easy to use</li>
+            <li>TABed cateory will be underlined</li>
+            <li>Currently active option is both underlined and outlined with a dotted border</li>
+            <li>Visually effective</li>
+          </ul>
+        </td>
+        <td>          
+          <ul>
+            <li>Selected option outlined with dotted border</li>
+            <li>May be hard to see</li>
+        </ul>
+      </td>
+      </tr>
+      <tr>
+        <th>
+          AirBnB
+        </th>
+        <td>
+          <ul>
+            <li>Dropdown header highlights upon hover</li>
+            <li>Upon selection, menu will invert colors (selected option white, background gray)</li>
+            <li>Currenlty active selection highlighted</li>
+            <li>Visually effective</li>
+        </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Focus order intuitive</li>
+            <li>Colors invert upon activation (visually effective)</li>
+            <li>Selected option stored and displayed where header used to be</li>
+        </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Lacks indicators (activates next category upon selection)</li>
+            <li>Can be improved upon</li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Google Slides
+        </th>
+        <td>
+          <ul>
+            <li>Dropdown header highlights upon hover, remains highlighted upon click</li>
+            <li>Subcategories highlight as hover traverses</li>
+            <li>No different indicator for selected option (remains highlighted)</li>
+        </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Not applicable</li>
+        </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Selection is briefly highlighted before excuting choice</li>
+        </ul>
+        </td>
+      </tr>
+    </table>
+
+    <h2>Output State Models for AirBnB</h2>
+    <div class="container">
+      <img src="images/state_model_1.png" alt="Hollister Neutral State" class="center">
+      <img src="images/state_model_2.png" alt="Hollister Hovered" class="center" style="display:inline-block;">
+    </div>
+  
+    <div class="container">
+      <img src="images/state_model_3.png" alt="Hollister Neutral State" class="center">
+      <img src="images/state_model_4.png" alt="Hollister Hovered" class="center" style="display:inline-block;">
+    </div>
+
+    <section id="part-1" class="section">
+      <h2>Adjusted AirBnB Interface</h2>
+      <div class="carousel">
+        <button onclick="goBackward()">&#x276E;</button>
+    <img id="mainImg" class="main-img" src="" alt="Slideshow Image">
+    <button onclick="goForward()">&#x276F;</button>
+      </div>
+    
+  </section>
+
+
+<div class="gridd">
+    <h2>Reflection</h2>
+    <p>
+
+The designs for dropdown menus varied across platforms and input to cater to different user needs 
+which allowed for unique and inclusive experiences. I particularly liked how the outputs for most 
+of the designs were stylized to indicate to the user their current choices. This was the key focus of my redesign.
+
+<br><br/>
+
+My design focused more on intuitive learnability and increased accessibility for keyboard users.
+
+<br><br/>
+
+My design solves for a mismatch by providing more options for users with limited mobility to navigate 
+dropdowns more easily. For example, in addition to being used for scrolling, holding the UP or DOWN 
+arrow can be used to quickly and smoothly traverse through options as opposed to the user having to repreatedly TAB all the way through.
+
+<br><br/>
+
+Google Slides is particularly difficult to navigate as a non-mouse user. The focus order is quite 
+confusing as it jumps all over the page in counter-clockwise order as opposed to a more intuitive 
+left-to-right, top-to-bottom. The dropdown options are also inaccessible to keyboard only users as 
+it requires that users click on dropdowns to activate them. Hollister's dropdown menus use a black 
+underline to indicate selection, but considering how much text appears on the dropdown menu, it can 
+be hard to pinpoint which option is being selected. The same can be said about the outlined border since it is light and faint.
+<br><br/>
+It is in my belief that mouse/touchpad users are most prioritized in the process of creating components 
+as most of the population will default to the use of that input method. This can negatively impact those 
+who rely more heavily on alternatives such as keyboard shortcuts or screenreaders because tools they also
+ need to use may not be engineered in the most efficient or useful way for them.
+
+    </p>
+  </div>
+
+  <script>
+    const images = [
+    "images/fixed_1.png",
+    "images/fixed_2.png",
+    "images/fixed_3.png",
+    ];
+
+    let currentIndex = 0;
+
+const mainImg = document.getElementById('mainImg');
+
+function updateImage() {
+  mainImg.src = images[currentIndex];
+}
+
+function goForward() {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateImage();
+}
+
+function goBackward() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateImage();
+}
+
+// Initialize with the first image
+updateImage();
+</script>
+  </body>
+</html>
